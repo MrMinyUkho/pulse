@@ -15,7 +15,7 @@ a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 
 /* Хедер */
-header{position:sticky; top:0; z-index:1000; backdrop-filter:saturate(120%) blur(8px); background:linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.65)); border-bottom:1px solid rgba(2,6,23,.06)}
+header{position:fixed; width: 100%; top:0; z-index:1000; backdrop-filter:saturate(120%) blur(8px); background:linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.65)); border-bottom:1px solid rgba(2,6,23,.06)}
 .logo-img {
   height: 36px;       /* подогнать под размер шрифта */
   width: auto;
