@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title> Визитная карточка</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 </head>
 <body>
 
-    <header>
+    <header id="headerid">
         <div class="nav">
             <div class="logo">
                 <span class="logo-dot" aria-hidden="true"></span>
@@ -17,16 +18,17 @@
                 </div>
             </div>
             <nav>
-                <a href="#projekte" class="btn">Наши проекты</a>
-                <a href="#team" class="btn" style="margin-left:8px">команда</a>
-                <a href="#Контакты" class="btn" style="margin-left:8px">Контакты</a>
+                <a href="#projects" class="header-links">Наши проекты</a>
+                <a href="#team" class="header-links" style="margin-left:24px">Команда</a>
+                <a href="#contacts" class="header-links" style="margin-left:24px">Контакты</a>
             </nav>
         </div>
     </header>
 
     <!-- Видосик без звука-->
     <section class="hero" id="start">
-        <video src="/Users/nikitaachkasov/Desktop/сайт/IMG_1494.MP4" autoplay muted loop playsinline></video>
+        <video src="./assets/IMG_1494.MP4" autoplay muted loop playsinline></video>
+        <div id="crutch">&#160;</div>
         <div class="hero-inner">
             <div class="hero-card">
                 <span class="kicker">заглавие </span>
@@ -59,7 +61,7 @@
     </section>
 
     <!-- Проекты -->
-    <section id="projekte">
+    <section id="projects">
         <div class="container">
             <h2 class="title">Проект</h2>
             <p class="sub">Контент будет позже</p>
@@ -80,10 +82,10 @@
         </div>
     </section>
 
-    <!-- TEAM -->
+    <!-- team -->
     <section id="team">
         <div class="container">
-            <h2 class="title">Team</h2>
+            <h2 class="title">team</h2>
             <p class="sub">12 Personen: Foto, Name, Position.</p>
             <div class="team">
                 <!-- 12 участников -->
@@ -142,7 +144,7 @@
     </section>
 
     <!-- FOOTER / KONTAKT -->
-    <footer id="Контакты">
+    <footer id="contacts">
         <div class="footer-inner">
             <div class="logo" style="color:#e5e7eb"><span class="logo-dot"></span><span>Pulse</span></div>
             <div class="contact">
