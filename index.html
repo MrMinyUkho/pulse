@@ -12,15 +12,16 @@
     <header id="headerid">
         <div class="nav">
             <div class="logo">
-                <span class="logo-dot" aria-hidden="true"></span>
                 <div class="logo">
-                    <img src="./assets/Pulse.png" alt="Pulse Logo" class="logo-img">
+                    <img id="logoWhite" src="./assets/PulseBoW.png" alt="Pulse Logo" class="logo-img">
+                    <img id="logoBlack" src="./assets/PulseWoB.png" alt="Pulse Logo" class="logo-img" style="display: none;">
                 </div>
             </div>
             <nav>
-                <a href="#projects" class="header-links">Наши проекты</a>
-                <a href="#team" class="header-links" style="margin-left:24px">Команда</a>
-                <a href="#contacts" class="header-links" style="margin-left:24px">Контакты</a>
+                <a id="loc-ourProj" href="#projects" class="header-links">Наши проекты</a>
+                <a id="loc-ourTeam" href="#team" class="header-links" style="margin-left:24px">Команда</a>
+                <a id="loc-ourContacts" href="#contacts" class="header-links" style="margin-left:24px">Контакты</a>
+                <a id="change-language" class="header-links unselectable" style="margin-left:32px; display: inline; cursor: pointer;">Українська</a>
             </nav>
         </div>
     </header>
@@ -31,32 +32,9 @@
         <div id="crutch">&#160;</div>
         <div class="hero-inner">
             <div class="hero-card">
-                <span class="kicker">заглавие </span>
                 <h1>Место для <span style="color:var(--brand)">трех</span> блоков</h1>
-                <div class="bullet">
-                    <span class="dot" aria-hidden="true"></span>
-                    <div>
-                        <strong>Блок 1:</strong>
-                        <div>тут будет стоять <b>слоган команды / примерно</b> в две строчки</div>
-                    </div>
-                </div>
-                <div class="bullet">
-                    <span class="dot" aria-hidden="true"></span>
-                    <div>
-                        <strong>Блок 2:</strong>
-                        <div>краткая инфа: <b>Названия проектов </b> и какое отношения имеют к Варшаве </div>
-                    </div>
-                </div>
-                <div class="bullet">
-                    <span class="dot" aria-hidden="true"></span>
-                    <div>
-                        <strong>Блок 3:</strong>
-                        <div>тут можно написать что то еще    <b></b>.</div>
-                    </div>
-                </div>
+                <span id="loc-short-description">
             </div>
-
-
         </div>
     </section>
 
@@ -66,7 +44,7 @@
             <h2 class="title">Проект</h2>
             <p class="sub">Контент будет позже</p>
             <div class="grid cols-2">
-                <div class="card">Пульс 1 </div>
+                <div class="card" id="loc-pulse1-desc">Пульс 1</div>
                 <div class="card"> Пульс 2</div>
             </div>
         </div>
@@ -86,12 +64,11 @@
     <section id="team">
         <div class="container">
             <h2 class="title">team</h2>
-            <p class="sub">12 Personen: Foto, Name, Position.</p>
-            <div class="team">
+            <div id="team-container" class="team">
                 <!-- 12 участников -->
                 <!-- фотки заменить можно в цсс файле -->
                 <!-- 1..12 -->
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя </div><div class="role">Верховный жрец</div></div></div>
+                
                 <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">властелин пламени</div></div></div>
                 <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">менеджер</div></div></div>
                 <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
@@ -148,7 +125,7 @@
         <div class="footer-inner">
             <div class="logo" style="color:#e5e7eb"><span class="logo-dot"></span><span>Pulse</span></div>
             <div class="contact">
-                <span class="pill"><strong>Kontakt:</strong> <span style="opacity:.9">email@gmail.com</span></span>
+                <span class="pill"><strong id="loc-Kontakt">Kontakt:</strong> <span style="opacity:.9">email@gmail.com</span></span>
                 <div style="display:flex;gap:8px;flex-wrap:wrap">
                 </div>
             </div>
