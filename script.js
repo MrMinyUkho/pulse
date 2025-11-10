@@ -264,7 +264,23 @@ $(document).ready(()=>{
                     Thanks to thorough preparation, the team answered all possible questions, including ecological, psychological, security, engineering, financial, and organizational, and modeled an approximate business model.<br><br>
                 `,
                 "pulse2-desc": `
-                
+                    <h3>Modular CHP (Combined Heat and Power) Production</h3>
+                    How did we get to this? Relatively low-cost production, the ability of modular constructions to be transported, the efficiency offered by the decentralization of power capacities in the energy sector.
+                    <h4>1) Brief Product Description</h4>
+                    Combined Heat and Power plants (CHP) - are one type of thermal power stations - the main difference is that in addition to producing electricity, we also produce thermal energy.
+                    The produced thermal energy is later used for heating spaces and supplying hot water.
+                    The maximum efficiency of CHP is around 95%, whereas traditional thermal power stations - 40%. We can call CHP an improved and energy-efficient version of thermal power stations.
+                    The ratio of produced electricity to thermal energy averages 30/70. This leads to a disadvantage: in most countries, demand for thermal energy drops during warm seasons because we don't need heating then.
+                    <h4>Why Modular Constructions?</h4>
+                    They are mobile. This means that despite their considerable mass (for a 1MW installation, up to 20 tons), they can be transported to a region where, for example, supply has dropped and you want to profit. The second advantage is based on the fact that production costs vary between countries. This allows producing modular CHP in one country and transporting it to more economically developed countries.
+                    <h4>2)	Demand in Ukraine</h4>
+                    As a result of military events, approximately 80% of thermal power stations, which include CHP plants, were destroyed.
+                    Small-capacity modular CHP would be an excellent solution because with a large number of small CHP units, they create decentralized capacity, which would require more resources to destroy compared to conventional CHP plants. When necessary, they can also be transported to de-energized regions from areas where there is sufficient electricity.
+                    The production of such modular CHP in Ukraine would serve both as support to the state and as an opportunity to stimulate Ukraine's economy through product export. A market opportunity for Ukraine is the lower production cost per unit compared to the USA and European countries, and the availability of highly qualified specialists in the field of engineering.
+                    <h4>3)	More Details on the Concept:</h4>
+                    As we can see, two important components of CHP - turbines and generators - are produced by Ukrainian companies in the field of power machinery manufacturing. The same applies to heat exchangers. The following illustration shows a rough formula that allows calculating three distance values: one each for electrical energy and thermal energy, and one overall; based on which we determine the rationality of placing a modular CHP with a capacity of 1MW. Also shown is an example of calculating savings from installing a mini-CHP: world average values were used as the basis.
+                    <img src="assets/content/pulse2img1.png">
+                    <img src="assets/content/pulse2img2.png">
                 `,
                 "pulse3-desc": `
                     While preparing for Rebuild Ukraine, the team had an idea: "What if we design a project specifically for the companies that will be there?" So all 12 of us started thinking: "What unites most companies?" After analyzing 112 companies (the database was collected from social networks and websites), we came to the conclusion that there are 3 directions covering 80% of companies, namely: creation (engineering and building materials) of modular houses, service companies (water, eco-solutions, renewable energy, and security systems).<br><br>
