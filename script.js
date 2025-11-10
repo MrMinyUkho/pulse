@@ -118,14 +118,14 @@ $(document).ready(()=>{
                     Ми команда студентів з різних сфер, об'єднана спільною метою: створювати комерційно<br>
                     успішні проекти з реальною соціальною користю.<br><br>
 
-                    <h4 style="margin:0;">Наші ключові принципи</h4>
-                    • Конструктивність.<br>
+                    <h2 style="margin:0;">Наші ключові принципи</h2>
+                    <b>• Конструктивність.</b><br>
                     Відкидаєш – пропонуй. Ми цінуємо критику, яка веде до вирішення питання.<br><br>
 
-                    • Відповідальність.<br>
+                    <b>• Відповідальність.</b><br>
                     Кожен відповідає за власний результат. Ми довіряємо один одному і очікуємо на активність.<br><br>
 
-                    • Єдність.<br>
+                    <b>• Єдність.</b><br>
                     Ми одна команда. Ділимося на групи для ефективності, але завжди працюємо як єдине ціле.
                 `,
                 "pulse1-desc": `
@@ -182,10 +182,19 @@ $(document).ready(()=>{
                 "pulse3-desc": `
                     Готуючись до ReBuild Ukraine, у команди з'явилася ідея "А давайте спробуємо зробити проєкт спеціально під компанії, які там будуть?", так і сіли всі 12 людей думати "Що об'єднує більшість компаній?". Проаналізувавши 112 компаній (база даних була зібрана за соціальними мережами та сайтом) ми дійшли висновку про 3 напрямки які охоплюють 80% компаній, а саме: створення (інжиніринг та будматеріали) модульних будинків, що обслуговують компанії (вода, еко рішення відновлювана енергетика та системи безпеки).<br><br>
 
-                    Ідея створення філії іноземної компанії не була у нас першою у списку всіх ідей. З тим, як ми заглиблювалися в початковий концепт, дізнаваючись про його недоліки, ідея з філією виникала все частіше. Врешті-решт вона стала основною, тому що початкова ідея була приведена до висновку "Компанії з модульними будинками і так роблять з 0 і повну установку, а значить, унікальність і синергія загубилися.<br><br>
+                    Ідея створення філії іноземної компанії не була у нас першою у списку всіх ідей. З тим, як ми заглиблювалися в початковий концепт, дізнаючись про його недоліки, ідея з філією виникала все частіше. Врешті-решт вона стала основною, тому що початкова ідея була приведена до висновку "Компанії з модульними будинками і так роблять з 0 і повну установку, а значить, унікальність і синергія загубилися.<br><br>
 
                     Про відповіді на запитання "А саме як так вийшло?" йде далі.
-                `
+                `,
+                "faq-title": "Найпоширеніші питання",
+                "faq1-q": "Що таке команда Пульс?",
+                "faq1-a": "Це група амбіційних студентів-активістів. Ми вперше зібралися на одному хакатоні, і після перемоги стали повноцінною командою із спільними амбіціями та інтересами.",
+                "faq2-q": "Які послуги ви пропонуєте?",
+                "faq2-a": "Якщо у вас є цікава ідея чи невеликий проект, де ви не знаєте, як далі рухатися, ми можемо приєднатися та дослідити всі важливі напрямки, щоб знайти рішення вашої задачі.",
+                "faq3-q": "Які у вас напрямки?",
+                "faq3-a": "Зараз ми працюємо в менеджменті, екології, економіці, програмуванні та інженерії, але відкриті до нових напрямків та учасників.",
+                "faq4-q": "Які у вас цінності?",
+                "faq4-a": "Об'єктивність, цілеспрямованість, вміння брати на себе відповідальність і великий інтерес до нового."
             }
         },
         us: {
@@ -226,14 +235,14 @@ $(document).ready(()=>{
                     We are a team of students from different fields, united by a common goal: to create commercially<br>
                     successful projects with real social benefit.<br><br>
 
-                    <h4 style="margin:0;">Our key principles:</h4>
-                    • Constructivity.<br>
+                    <h2 style="margin:0;">Our key principles:</h2>
+                    <b>• Constructivity.</b><br>
                     If you reject, suggest. We value criticism that leads to a solution.<br><br>
 
-                    • Responsibility.<br>
+                    <b>• Responsibility.</b><br>
                     Everyone is responsible for their own results. We trust each other and expect activity.<br><br>
 
-                    • Unity.<br>
+                    <b>• Unity.</b><br>
                     We are one team. We divide into groups for efficiency, but always work as a single whole.
                 `,
                 "pulse1-desc": `
@@ -288,7 +297,16 @@ $(document).ready(()=>{
                     The idea of creating a branch of a foreign company was not at the top of our list of ideas. As we delved deeper into the original concept and discovered its shortcomings, the branch idea came up more and more often. Eventually, it became our main focus because the original idea led to the conclusion: "Companies with modular houses already do everything from zero to full installation themselves, which means uniqueness and synergy were lost."<br><br>
 
                     The answer to "How exactly did this happen?" will be explained further.
-                `
+                `,
+                "faq-title": "FAQ",
+                "faq1-q": "What is the Pulse team?",
+                "faq1-a": "It is a group of ambitious and skilled student activists. We first met at a hackathon, and after winning, became a full team with shared ambitions and interests.",
+                "faq2-q": "What services do you offer?",
+                "faq2-a": "If you have an interesting idea or a small project where you don’t see a way forward, we can join and explore all the important directions to find a solution for your problem.",
+                "faq3-q": "What areas do you work in?",
+                "faq3-a": "Currently, we work in management, ecology, economics, programming, and engineering, but we are open to new directions and members.",
+                "faq4-q": "What are your values?",
+                "faq4-a": "Objectivity, determination, ability to take responsibility, and a strong interest in new things."
             }
 
         }
@@ -296,7 +314,7 @@ $(document).ready(()=>{
 
     const list_team_members = [
         { name:"lera",   role:"lera-role",   image:"Lera.jpg" },
-        { name:"alex",   role:"alex-role",   image:"alex.jpg" },
+        { name:"alex",   role:"alex-role",   image:"alex.png" },
         { name:"misha",  role:"misha-role",  image:"Michail.jpg" },
         { name:"igor",   role:"igor-role",   image:"Igor.jpg" },
         { name:"anton",  role:"anton-role",  image:"Anton.jpg" },
@@ -304,7 +322,7 @@ $(document).ready(()=>{
         { name:"dima2",  role:"dima2-role",  image:"Dmytro1.jpg" },
         { name:"roma",   role:"roma-role",   image:"Roman.jpg" },
         { name:"denis",  role:"denis-role",  image:"Denis.jpg" },
-        { name:"nick",   role:"nick-role",   image:"nick.jpg" },
+        { name:"nick",   role:"nick-role",   image:"nick.png" },
     ]
 
     $("#team-container").html("")

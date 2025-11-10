@@ -5,13 +5,12 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 const canvas = document.getElementById('threeCanvas')
 
 const scene = new THREE.Scene()
-scene.background = new THREE.Color(0x0b1220)
 
 const camera = new THREE.PerspectiveCamera(50, canvas.clientWidth / canvas.clientHeight, 0.1, 100)
 camera.position.set(5, 5, 5)
 camera.lookAt(0, 0, 0)
 
-const renderer = new THREE.WebGLRenderer({canvas, antialias:true})
+const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha: true})
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 function resize(){
     const w = canvas.clientWidth
@@ -33,7 +32,7 @@ controls.enableDamping = true
 
 const loader = new GLTFLoader();
 loader.load(
-    './assets/Untitled.glb',
+    './assets/house.glb',
     gltf=>{
         scene.add(gltf.scene)
         function animate() {

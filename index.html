@@ -48,7 +48,7 @@
     <section id="projects">
         <div class="container">
             <h2 class="title" id="loc-our-projects">Наші проєкт</h2>
-            <div class="grid cols-2">
+            <div class="grid">
                 <div class="project-card card">
                     <button class="project-q">
                         <span>Пульс 1</span>
@@ -73,6 +73,9 @@
                         <span class="arrow"></span>
                     </button>
                     <div class="project-a">
+                        <div id="viewerWrap" style="margin: 0 18px;">
+                            <canvas id="threeCanvas" aria-label="3D-Viewer"></canvas>
+                        </div>
                         <div class="inner" id="loc-pulse3-desc"></div>
                     </div>
                 </div>
@@ -89,76 +92,48 @@
         </div>
     </section>
 
-    <!-- VIDEO SEKTION -->
-    <section id="video">
-        <div class="container">
-            <h2 class="title">Видео</h2>
-            <div class="card" style="min-height:220px;width:100%">
-            </div>
-        </div>
-    </section>
 
     <!-- team -->
     <section id="team">
         <div class="container">
             <h2 class="title">Команда</h2>
-            <div id="team-container" class="team">
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">властелин пламени</div></div></div>
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">менеджер</div></div></div>
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
-                <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
-            </div>
+            <div id="team-container" class="team"></div>
         </div>
     </section>
 
-    <section id="model3d">
-        <div class="container">
-            <h2 class="title">3D-Модель</h2>
-            <div id="viewerWrap">
-                <canvas id="threeCanvas" aria-label="3D-Viewer"></canvas>
-            </div>
-        </div>
-    </section>
+
 
     <section id="faq">
         <div class="container">
-            <h2 class="title">Часто задаваемые вопросы</h2>
+            <h2 class="title" id="loc-faq-title">Часто задаваемые вопросы</h2>
             <div class="faq">
                 <div class="faq-item">
                     <button class="faq-q">
-                        <span>Альянс или Орда?</span>
+                        <span id="loc-faq1-q"></span>
                         <span class="arrow"></span>
                     </button>
-                    <div class="faq-a"><div class="inner">ответ.</div></div>
+                    <div class="faq-a"><div class="inner" id="loc-faq1-a"></div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-q">
-                        <span>Модный вопрос</span>
+                        <span id="loc-faq2-q"></span>
                         <span class="arrow"></span>
                     </button>
-                    <div class="faq-a"><div class="inner">ответ.</div></div>
+                    <div class="faq-a"><div class="inner" id="loc-faq2-a"></div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-q">
-                        <span>Модный вопрос</span>
+                        <span id="loc-faq3-q"></span>
                         <span class="arrow"></span>
                     </button>
-                    <div class="faq-a"><div class="inner">ответ.</div></div>
+                    <div class="faq-a"><div class="inner" id="loc-faq3-a"></div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-q">
-                        <span>Модный вопрос</span>
+                        <span id="loc-faq4-q"></span>
                         <span class="arrow"></span>
                     </button>
-                    <div class="faq-a"><div class="inner">ответ.</div></div>
+                    <div class="faq-a"><div class="inner" id="loc-faq4-a"></div></div>
                 </div>
             </div>
         </div>
