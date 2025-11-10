@@ -91,11 +91,13 @@ $(document).ready(()=>{
                 ourContacts: "Контакти",
                 Kontakt: "Почта:",
                 "entry-word": "Робимо життя краще",
+                "our-projects": "Наші проєкти",
                 "short-description": `
                     Ми команда студентів з різних сфер, об'єднана спільною метою: створювати комерційно<br>
                     успішні проекти з реальною соціальною користю.<br><br>
 
-                    <h4 style="margin:0;">Наші ключові принципи</h4> Конструктивність.<br>
+                    <h4 style="margin:0;">Наші ключові принципи</h4>
+                    Конструктивність.<br>
                     Відкидаєш – пропонуй. Ми цінуємо критику, яка веде до вирішення питання.<br><br>
 
                     Відповідальність.<br>
@@ -132,6 +134,35 @@ $(document).ready(()=>{
 
                     Завдяки ретельній підготовці команда відповіла на всі питання, включно з екологічними, психологічними, безпековими, інженерними, фінансовими та організаційними, і змоделювала приблизну бізнес-модель.<br><br>
                 
+                `,
+                "pulse2-desc": `
+                    <h2>Виробництво модульних ТЕЦ</h2>
+
+                    Як ми дійшли до цього? Відносно недороге виробництво, здатність модульних конструкцій до транспортування, ефективність, яку пропонує децентралізація потужностей у сфері енергетики.
+                    <h3>1) Короткий опис продукту</h3>
+                    Теплоелектроцентралі (ТЕЦ) - це один із видів теплоелектростанцій - головна відмінність у тому, що крім виробництва електроенергії, ми також виробляємо теплову енергію.
+                    Виробнена теплова енергія згодом застосовується для опалення приміщень, а також для постачання гарячої води.
+                    Максимальний ККД ТЕЦ становить близько 95%, коли ТЕС - 40%. Ми можемо назвати ТЕЦ вдосконаленою та енергоефективною версією ТЕС.
+                    Співвідношення виробленої електроенергії до теплової в середньому становить 30/70. З цього випливає мінус: у більшості країн попит на теплову енергію падає у теплі періоди року, тому що тоді ми не потребуємо опалення.
+                    <h4>Чому модульні конструкції?</h4>
+                    Вони мобільні. Це означає, що незважаючи на свою внушуючу масу (на установку потужністю 1МВт це до 20 тонн), її можливо транспортувати в регіон, де, наприклад, пропозиція впала, і ви хочете на цьому заробити. Друга перевага спирається на те, що собівартість виробництва варіюється між країнами. Це дозволяє виробляти модульні ТЕЦ в одній країні і транспортувати її в більш економічно розвинені країни.
+                    <h3>2)	Попит в Україні</h3>
+                    Внаслідок військових подій було зруйновано близько 80% ТЕС, які включають ТЕЦ.
+                    Модульні ТЕЦ малої потужності стали б відмінним рішенням, адже при великій кількості малих ТЕЦ вони створюють децентралізовану потужність, для знищення якої знадобиться виділити більше грошей порівняно зі звичайними ТЕЦ. При необхідності їх також можливо транспортувати в знеструмлені регіони з тих, де електроенергії достатньо.
+                    Виробництво таких модульних ТЕЦ в Україні стало б як підтримкою державі, так і можливістю стимулювати економіку України шляхом експортування продукції. Ринковою можливістю для
+                    України виступає менша собівартість одиниці виробництва порівняно зі США та країнами Європи та наявність висококваліфікованих спеціалістів у галузі інженерії.
+                    <h3>3) Детальніше про концепцію</h3>
+                    <img src="assets/content/handdrawing.png">
+                    Як ми бачимо, два важливих компонента ТЕЦ - турбіна та генератор, виробляються українськими компаніями в сфері енергетичного машинобудування. Те саме стосується теплообмінників. На наступній ілюстрації показана груба формула, що дозволяє порахувати три значення відстані: по одному на ЕЕ та ТЕ та одне загальне; відштовхуючись від яких виявляється раціональність розміщення модульної ТЕЦ потужністю 1МВт. Також показаний приклад розрахунку економії, обумовленої установкою мініатюрної ТЕЦ: за основу були взяті середньостатистичні значення по світу.
+                    <img src="assets/content/pulse2img1.png">
+                    <img src="assets/content/pulse2img2.png">
+                `,
+                "pulse3-desc": `
+                    Готуючись до ReBuild Ukraine, у команди з'явилася ідея "А давайте спробуємо зробити проєкт спеціально під компанії, які там будуть?", так і сіли всі 12 людей думати "Що об'єднує більшість компаній?". Проаналізувавши 112 компаній (база даних була зібрана за соціальними мережами та сайтом) ми дійшли висновку про 3 напрямки які охоплюють 80% компаній, а саме: створення (інжиніринг та будматеріали) модульних будинків, що обслуговують компанії (вода, еко рішення відновлювана енергетика та системи безпеки).<br><br>
+
+                    Ідея створення філії іноземної компанії не була у нас першою у списку всіх ідей. З тим, як ми заглиблювалися в початковий концепт, дізнаваючись про його недоліки, ідея з філією виникала все частіше. Врешті-решт вона стала основною, тому що початкова ідея була приведена до висновку "Компанії з модульними будинками і так роблять з 0 і повну установку, а значить, унікальність і синергія загубилися.<br><br>
+
+                    Про відповіді на запитання "А саме як так вийшло?" йде далі.
                 `
             }
         },
@@ -167,7 +198,58 @@ $(document).ready(()=>{
                 ourTeam: "Team",
                 ourContacts: "Contacts",
                 Kontakt: "E-mail:",
+                "our-projects": "Our projects",
                 "entry-word": "Making life better",
+                "short-description": `
+                    We are a team of students from different fields, united by a common goal: to create commercially successful projects with real social benefit.<br><br>
+
+                    <h4 style="margin:0;">Our key principles:</h4>
+                    Constructivity.<br>
+                    If you reject, suggest. We value criticism that leads to a solution.<br><br>
+
+                    Responsibility.<br>
+                    Everyone is responsible for their own results. We trust each other and expect activity.<br><br>
+
+                    Unity.<br>
+                    We are one team. We divide into groups for efficiency, but always work as a single whole.
+                `,
+                "pulse1-desc": `
+                    Sold the project in 3 minutes. What is the project? How?<br><br>
+
+                    On October 18, 2025, the Pulse team had to split into two parts at the hackathon because the rules allowed a maximum of 6 people per team. That’s how the projects Pulse 1 and Pulse 2 appeared.<br>
+                    Directions of Pulse 1 project: economics, business strategies, and social part.<br>
+
+                    Pulse 1 was developed based on the idea of moving business underground and choosing the most relevant and promising directions. Now, we have 3 modules working in synergy:<br>
+                    "Brain" — a chip design laboratory.<br>
+                    "Spine" — a data center used to store intellectual property and rent it to businesses across the country.<br>
+                    "Heart" — a medical hub where technologies from the laboratory are used to produce next-generation prosthetics, which are needed in post-war Ukraine and even now.<br><br>
+
+                    Three completely different spheres work in one place, but each benefits from cooperation. Chips are made for prosthetics, and the database is stored in the data center used by the industrial park residents. Each business operates separately, and such cooperation is only part of the volume.<br><br>
+
+                    What exactly did we do?<br><br>
+
+                    Analyzed potential clients, including companies that left the country due to the war and foreign companies interested in scaling business in Kharkiv. Created a database.<br><br>
+
+                    Team economists calculated the amount of investment required to launch, maintain, and develop each module.<br><br>
+
+                    Obtained an exact range of necessary investments and developed a financial plan, including planned profitability, payback period, and economic benefits for each module.<br><br>
+
+                    Researched that the city will receive highly paid jobs and talents who stay and work for the good of the region and the country, turning Kharkiv into a high-tech hub.<br><br>
+
+                    Identified the most probable risks and developed ways to minimize them to increase the project’s chances of success.<br><br>
+
+                    Thanks to thorough preparation, the team answered all possible questions, including ecological, psychological, security, engineering, financial, and organizational, and modeled an approximate business model.<br><br>
+                `,
+                "pulse2-desc": `
+                
+                `,
+                "pulse3-desc": `
+                    While preparing for Rebuild Ukraine, the team had an idea: "What if we design a project specifically for the companies that will be there?" So all 12 of us started thinking: "What unites most companies?" After analyzing 112 companies (the database was collected from social networks and websites), we came to the conclusion that there are 3 directions covering 80% of companies, namely: creation (engineering and building materials) of modular houses, service companies (water, eco-solutions, renewable energy, and security systems).<br><br>
+
+                    The idea of creating a branch of a foreign company was not at the top of our list of ideas. As we delved deeper into the original concept and discovered its shortcomings, the branch idea came up more and more often. Eventually, it became our main focus because the original idea led to the conclusion: "Companies with modular houses already do everything from zero to full installation themselves, which means uniqueness and synergy were lost."<br><br>
+
+                    The answer to "How exactly did this happen?" will be explained further.
+                `
             }
 
         }
@@ -175,7 +257,7 @@ $(document).ready(()=>{
 
     const list_team_members = [
         { name:"lera",   role:"lera-role",   image:"Lera.jpg" },
-        { name:"alex",   role:"alex-role",   image:"" },
+        { name:"alex",   role:"alex-role",   image:"alex.jpg" },
         { name:"misha",  role:"misha-role",  image:"Michail.jpg" },
         { name:"igor",   role:"igor-role",   image:"Igor.jpg" },
         { name:"anton",  role:"anton-role",  image:"Anton.jpg" },
@@ -183,7 +265,7 @@ $(document).ready(()=>{
         { name:"dima2",  role:"dima2-role",  image:"Dmytro1.jpg" },
         { name:"roma",   role:"roma-role",   image:"Roman.jpg" },
         { name:"denis",  role:"denis-role",  image:"Denis.jpg" },
-        { name:"nick",   role:"nick-role",   image:"" },
+        { name:"nick",   role:"nick-role",   image:"nick.jpg" },
     ]
 
     $("#team-container").html("")
