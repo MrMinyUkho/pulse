@@ -112,7 +112,7 @@ $(document).ready(()=>{
                 ourTeam: "Команда",
                 ourContacts: "Контакти",
                 Kontakt: "Почта:",
-                "entry-word": "Робимо життя краще ✨",
+                "entry-word": "Думай глибше, але не ускладнюй ✨",
                 "our-projects": "Наші проєкти",
                 "short-description": `
                     Ми команда студентів з різних сфер, об'єднана спільною метою: створювати комерційно<br>
@@ -129,7 +129,6 @@ $(document).ready(()=>{
                     Ми одна команда. Ділимося на групи для ефективності, але завжди працюємо як єдине ціле.
                 `,
                 "pulse1-desc": `
-                
                     Продали проєкт за 3 хвилини. Що за проєкт? Як?<br><br>
 
                     18 жовтня 2025 команда Пульс була змушена розділитися на 2 частини на хакатоні, оскільки правила дозволяли максимум 6 осіб у команді. Так і з'явилися проєкти Пульс 1 і Пульс 2.<br>
@@ -142,7 +141,7 @@ $(document).ready(()=>{
 
                     У одному приміщенні працюють 3 абсолютно різні сфери, але кожен отримує вигоду завдяки співпраці. Чіпи виготовляються для протезів, а база даних зберігається у дата-центрі, яким можуть користуватися резиденти індустріального парку. При цьому кожен бізнес працює окремо, а така співпраця — лише частина обсягу.<br><br>
 
-                    Що саме ми зробили?<br><br>
+                    <h4 style="margin:0;">Що саме ми зробили?</h4><br>
 
                     Проаналізували потенційних клієнтів, включно з компаніями, які покинули країну через війну, і іноземними компаніями, зацікавленими у масштабуванні бізнесу в Харкові. Сформували базу даних.<br><br>
 
@@ -155,7 +154,7 @@ $(document).ready(()=>{
                     Вказали найімовірніші ризики і розробили шляхи їх мінімізації для підвищення шансу реалізації проєкту.<br><br>
 
                     Завдяки ретельній підготовці команда відповіла на всі питання, включно з екологічними, психологічними, безпековими, інженерними, фінансовими та організаційними, і змоделювала приблизну бізнес-модель.<br><br>
-                
+                    <img src="assets/content/pulse1.PNG"><br>
                 `,
                 "pulse2-desc": `
                     <h2>Виробництво модульних ТЕЦ</h2>
@@ -186,6 +185,7 @@ $(document).ready(()=>{
 
                     Про відповіді на запитання "А саме як так вийшло?" йде далі.
                 `,
+                "pulse4-desc":`<img style="border-radius: 1em;" src="assets/content/soon_ua.PNG">`,
                 "faq-title": "Найпоширеніші питання",
                 "faq1-q": "Що таке команда Пульс?",
                 "faq1-a": "Це група амбіційних студентів-активістів. Ми вперше зібралися на одному хакатоні, і після перемоги стали повноцінною командою із спільними амбіціями та інтересами.",
@@ -194,7 +194,12 @@ $(document).ready(()=>{
                 "faq3-q": "Які у вас напрямки?",
                 "faq3-a": "Зараз ми працюємо в менеджменті, екології, економіці, програмуванні та інженерії, але відкриті до нових напрямків та учасників.",
                 "faq4-q": "Які у вас цінності?",
-                "faq4-a": "Об'єктивність, цілеспрямованість, вміння брати на себе відповідальність і великий інтерес до нового."
+                "faq4-a": "Об'єктивність, цілеспрямованість, вміння брати на себе відповідальність і великий інтерес до нового.",
+                "puls1name": "Пульс 1",
+                "puls2name": "Пульс 2",
+                "puls3name": "Проєкт «Варшава»",
+                "puls4name": "Скоро…",
+                "team-logo": "Команда"
             }
         },
         us: {
@@ -230,7 +235,7 @@ $(document).ready(()=>{
                 ourContacts: "Contacts",
                 Kontakt: "E-mail:",
                 "our-projects": "Our projects",
-                "entry-word": "Making life better ✨",
+                "entry-word": "Think deeply, but don't complicate ✨",
                 "short-description": `
                     We are a team of students from different fields, united by a common goal: to create commercially<br>
                     successful projects with real social benefit.<br><br>
@@ -258,7 +263,7 @@ $(document).ready(()=>{
 
                     Three completely different spheres work in one place, but each benefits from cooperation. Chips are made for prosthetics, and the database is stored in the data center used by the industrial park residents. Each business operates separately, and such cooperation is only part of the volume.<br><br>
 
-                    What exactly did we do?<br><br>
+                    <h4 style="margin:0;">What exactly did we do?</h4><br>
 
                     Analyzed potential clients, including companies that left the country due to the war and foreign companies interested in scaling business in Kharkiv. Created a database.<br><br>
 
@@ -271,6 +276,7 @@ $(document).ready(()=>{
                     Identified the most probable risks and developed ways to minimize them to increase the project’s chances of success.<br><br>
 
                     Thanks to thorough preparation, the team answered all possible questions, including ecological, psychological, security, engineering, financial, and organizational, and modeled an approximate business model.<br><br>
+                    <img src="assets/content/pulse1.PNG"><br>
                 `,
                 "pulse2-desc": `
                     <h3>Modular CHP (Combined Heat and Power) Production</h3>
@@ -298,6 +304,7 @@ $(document).ready(()=>{
 
                     The answer to "How exactly did this happen?" will be explained further.
                 `,
+                "pulse4-desc":`<img style="border-radius: 1em;" src="assets/content/soon_us.PNG">`,
                 "faq-title": "FAQ",
                 "faq1-q": "What is the Pulse team?",
                 "faq1-a": "It is a group of ambitious and skilled student activists. We first met at a hackathon, and after winning, became a full team with shared ambitions and interests.",
@@ -306,7 +313,12 @@ $(document).ready(()=>{
                 "faq3-q": "What areas do you work in?",
                 "faq3-a": "Currently, we work in management, ecology, economics, programming, and engineering, but we are open to new directions and members.",
                 "faq4-q": "What are your values?",
-                "faq4-a": "Objectivity, determination, ability to take responsibility, and a strong interest in new things."
+                "faq4-a": "Objectivity, determination, ability to take responsibility, and a strong interest in new things.",
+                "puls1name": "Puls 1",
+                "puls2name": "Puls 2",
+                "puls3name": "«Warszawa» project",
+                "puls4name": "Soon…",
+                "team-logo": "Team"
             }
 
         }

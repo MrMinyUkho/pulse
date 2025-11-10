@@ -6,8 +6,8 @@ const canvas = document.getElementById('threeCanvas')
 
 const scene = new THREE.Scene()
 
-const camera = new THREE.PerspectiveCamera(50, canvas.clientWidth / canvas.clientHeight, 0.1, 100)
-camera.position.set(5, 5, 5)
+const camera = new THREE.PerspectiveCamera(70, canvas.clientWidth / canvas.clientHeight, 0.1, 100)
+camera.position.set(2, 1, 0)
 camera.lookAt(0, 0, 0)
 
 const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha: true})
@@ -21,9 +21,9 @@ function resize(){
 }
 resize(); window.addEventListener('resize', resize)
 
-const hemi = new THREE.HemisphereLight(0xffffff, 0x223344, 1.2)
+const hemi = new THREE.HemisphereLight(0xffffff, 0x223344, 3)
 scene.add(hemi);
-const dir = new THREE.DirectionalLight(0xffffff, 1.0)
+const dir = new THREE.DirectionalLight(0xffffff, 3.0)
 dir.position.set(5,5,5)
 scene.add(dir)
 
@@ -32,12 +32,12 @@ controls.enableDamping = true
 
 const loader = new GLTFLoader();
 loader.load(
-    './assets/house.glb',
+    './assets/Home1.glb',
     gltf=>{
         scene.add(gltf.scene)
         function animate() {
-            requestAnimationFrame(animate)
             renderer.render(scene, camera)
+            requestAnimationFrame(animate)
         }
         animate()
     },
