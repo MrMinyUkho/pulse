@@ -109,7 +109,7 @@ header {
     top:0;
     z-index:1000;
     backdrop-filter:saturate(120%) blur(8px);
-    background-color: #e2f5ff;
+    background-color: #f8f3fb;
     border-bottom:1px solid rgba(2,6,23,.06)
 }
 
@@ -184,13 +184,22 @@ section{padding:68px 0}
 .grid{display:grid; gap:18px}
 @media (max-width:920px){ .hero-inner{grid-template-columns:1fr} .grid.cols-2{grid-template-columns:1fr} .grid.cols-3{grid-template-columns:repeat(2,1fr)} }
 @media (max-width:620px){ .grid.cols-3{grid-template-columns:1fr} .hero-card h1{font-size:34px} }
-.card{background:#fff; border:1px solid rgba(2,6,23,.08); border-radius:18px; padding:18px; box-shadow:var(--shadow); min-height:130px; display:flex; color:#1f2937}
+.card{background:#fff; border:1px solid rgba(2,6,23,.08); border-radius:18px; padding:18px; box-shadow:var(--shadow); min-height:130px; color:#1f2937}
 
 /* команда */
-.team{display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:16px}
+.team{display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:16px}
 @media (max-width:1100px){ .team{grid-template-columns:repeat(4,1fr)} }
 @media (max-width:700px){ .team{grid-template-columns:repeat(2,1fr)} }
-.member{background:#fff; border:1px solid rgba(2,6,23,.08); border-radius:18px; overflow:hidden; box-shadow:var(--shadow); transition: transform .2s ease, box-shadow .2s ease;}
+.member{
+    background:#fff;
+    border:1px solid rgba(2,6,23,.08);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition: transform .2s ease, 
+    box-shadow .2s ease;
+}
+
 .member:hover {
     transform: scale(1.03);
     box-shadow: 0 10px 30px rgba(2,6,23,.30);
@@ -200,6 +209,7 @@ section{padding:68px 0}
     aspect-ratio:1/1.25; 
     background:linear-gradient(135deg, #e2f5ff, #ffffff);
     background-size: cover;
+    background-position: center;
     display:grid; 
     place-items:center; 
     color:#1f2937; 
