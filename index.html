@@ -60,7 +60,6 @@
     <section id="video">
         <div class="container">
             <h2 class="title">Видео</h2>
-            <p class="sub">тут можно вставить видео еще если нужно</p>
             <div class="card" style="min-height:220px;width:100%">
             </div>
         </div>
@@ -69,12 +68,8 @@
     <!-- team -->
     <section id="team">
         <div class="container">
-            <h2 class="title">team</h2>
+            <h2 class="title">Команда</h2>
             <div id="team-container" class="team">
-                <!-- 12 участников -->
-                <!-- фотки заменить можно в цсс файле -->
-                <!-- 1..12 -->
-                
                 <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">властелин пламени</div></div></div>
                 <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">менеджер</div></div></div>
                 <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
@@ -91,48 +86,56 @@
         </div>
     </section>
 
-    <!-- 3D MODELL -->
     <section id="model3d">
         <div class="container">
-            <h2 class="title">3D-Modell</h2>
-            <!-- <p class="sub">    по идеи должно крутиться и приближаться <code>assets/model.glb</code> </p> -->
+            <h2 class="title">3D-Модель</h2>
             <div id="viewerWrap">
                 <canvas id="threeCanvas" aria-label="3D-Viewer"></canvas>
             </div>
         </div>
     </section>
 
-    <!-- секция вопросов -->
     <section id="faq">
         <div class="container">
-            <h2 class="title">Q&A</h2>
+            <h2 class="title">Часто задаваемые вопросы</h2>
             <div class="faq">
                 <div class="faq-item">
-                    <button class="faq-q">Альянс или Орда?<span>+</span></button>
+                    <button class="faq-q">
+                        <span>Альянс или Орда?</span>
+                        <span class="arrow"></span>
+                    </button>
                     <div class="faq-a"><div class="inner">ответ.</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-q">Модный вопрос    <span>+</span></button>
+                    <button class="faq-q">
+                        <span>Модный вопрос</span>
+                        <span class="arrow"></span>
+                    </button>
                     <div class="faq-a"><div class="inner">ответ.</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-q">Модный вопрос    <span>+</span></button>
+                    <button class="faq-q">
+                        <span>Модный вопрос</span>
+                        <span class="arrow"></span>
+                    </button>
                     <div class="faq-a"><div class="inner">ответ.</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-q">Модный вопрос <span>+</span></button>
+                    <button class="faq-q">
+                        <span>Модный вопрос</span>
+                        <span class="arrow"></span>
+                    </button>
                     <div class="faq-a"><div class="inner">ответ.</div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER / KONTAKT -->
     <footer id="contacts">
         <div class="footer-inner">
-            <div class="logo" style="color:#e5e7eb">
-                <img id="logoBlack" src="./assets/PulseWoB.png" alt="Pulse Logo" class="logo-img">
-            </div>
+            <a href="https://pulse-ua.studio" class="logo" style="color:#e5e7eb">
+                <img src="./assets/PulseWoB.png" alt="Pulse Logo" class="logo-img">
+            </a>
             <div class="contact">
                 <span class="pill"><strong id="loc-Kontakt">Kontakt:</strong> <span style="opacity:.9">team.pulse.ua@gmail.com</span></span>
                 <div style="display:flex;gap:8px;flex-wrap:wrap">

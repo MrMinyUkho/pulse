@@ -5,6 +5,13 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
     });
 });
 
+// функционал для карточек проектов
+document.querySelectorAll('.project-q').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+        btn.closest('.project-card').classList.toggle('open');
+    });
+});
+
 $(document).ready(()=>{
 
     const locale = new Intl.Locale(navigator.language)
@@ -79,14 +86,15 @@ $(document).ready(()=>{
                 "nick-role": "Програміст"
             },
             content: {
-                ourProj: "Наші проєкти",
+                ourProj: "Проєкти",
                 ourTeam: "Команда",
                 ourContacts: "Контакти",
-                Kontakt: "Контакти:",
+                Kontakt: "Почта:",
                 "entry-word": "Робимо життя краще",
                 "our-projects": "Наші проєкти",
                 "short-description": `
-                    Ми команда студентів з різних сфер, об'єднана спільною метою: створювати комерційно успішні проєкти з реальною соціальною користю.<br><br>
+                    Ми команда студентів з різних сфер, об'єднана спільною метою: створювати комерційно<br>
+                    успішні проекти з реальною соціальною користю.<br><br>
 
                     <h4 style="margin:0;">Наші ключові принципи</h4>
                     Конструктивність.<br>
@@ -186,10 +194,10 @@ $(document).ready(()=>{
                 "nick-role": "Programmer"
             },
             content: {
-                ourProj: "Our projects",
+                ourProj: "Projects",
                 ourTeam: "Team",
                 ourContacts: "Contacts",
-                Kontakt: "Contacts:",
+                Kontakt: "E-mail:",
                 "our-projects": "Our projects",
                 "entry-word": "Making life better",
                 "short-description": `
@@ -255,7 +263,6 @@ $(document).ready(()=>{
         { name:"anton",  role:"anton-role",  image:"Anton.jpg" },
         { name:"dima1",  role:"dima1-role",  image:"Dmytro2.jpg" },
         { name:"dima2",  role:"dima2-role",  image:"Dmytro1.jpg" },
-      //{ name:"marina", role:"marina-role", image:"Marina.jpg" },
         { name:"roma",   role:"roma-role",   image:"Roman.jpg" },
         { name:"denis",  role:"denis-role",  image:"Denis.jpg" },
         { name:"nick",   role:"nick-role",   image:"nick.jpg" },
