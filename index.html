@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title> Визитная карточка</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 </head>
@@ -47,29 +48,35 @@
     <!-- Проекты -->
     <section id="projects">
         <div class="container">
-            <h2 class="title" id="loc-our-projects"></h2>
+            <h2 class="title" id="loc-our-projects"><i class="bi bi-grid"></i></h2>
             <div class="grid">
                 <div class="project-card card">
                     <button class="project-q">
-                        <span id="loc-pulse1name"></span>
+                        <span id="loc-pulse1name"><i class="bi bi-arrow-right-short"></i></span>
                         <span class="arrow"></span>
                     </button>
                     <div class="project-a">
                         <div class="inner" id="loc-pulse1-desc"></div>
+                        <div class="project-footer">
+                            <a href="#" class="btn-learn-more" id="loc-learn-more1"><i class="bi bi-box-arrow-up-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card card">
                     <button class="project-q">
-                        <span id="loc-pulse2name"></span>
+                        <span id="loc-pulse2name"><i class="bi bi-arrow-right-short"></i></span>
                         <span class="arrow"></span>
                     </button>
                     <div class="project-a">
                         <div class="inner" id="loc-pulse2-desc"></div>
+                        <div class="project-footer">
+                            <a href="#" class="btn-learn-more" id="loc-learn-more2"><i class="bi bi-box-arrow-up-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card card">
                     <button class="project-q">
-                        <span id="loc-pulse3name"></span>
+                        <span id="loc-pulse3name"><i class="bi bi-arrow-right-short"></i></span>
                         <span class="arrow"></span>
                     </button>
                     <div class="project-a">
@@ -77,11 +84,14 @@
                             <canvas id="threeCanvas" aria-label="3D-Viewer"></canvas>
                         </div>
                         <div class="inner" id="loc-pulse3-desc"></div>
+                        <div class="project-footer">
+                            <a href="#" class="btn-learn-more" id="loc-learn-more3"><i class="bi bi-box-arrow-up-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card card">
                     <button class="project-q">
-                        <span id="loc-pulse4name"></span>
+                        <span id="loc-pulse4name"><i class="bi bi-arrow-right-short"></i></span>
                         <span class="arrow"></span>
                     </button>
                     <div class="project-a">
@@ -96,7 +106,7 @@
     <!-- team -->
     <section id="team">
         <div class="container">
-            <h2 class="title" id="loc-team-logo"></h2>
+            <h2 class="title" id="loc-team-logo"><i class="bi bi-people"></i> </h2>
             <div id="team-container" class="team"></div>
         </div>
     </section>
@@ -105,32 +115,32 @@
 
     <section id="faq">
         <div class="container">
-            <h2 class="title" id="loc-faq-title"></h2>
+            <h2 class="title" id="loc-faq-title"><i class="bi bi-question-circle"></i></h2>
             <div class="faq">
                 <div class="faq-item">
                     <button class="faq-q">
-                        <span id="loc-faq1-q"></span>
+                        <span id="loc-faq1-q"><i class="bi bi-arrow-right-short"></i></span>
                         <span class="arrow"></span>
                     </button>
                     <div class="faq-a"><div class="inner" id="loc-faq1-a"></div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-q">
-                        <span id="loc-faq2-q"></span>
+                        <span id="loc-faq2-q"><i class="bi bi-arrow-right-short"></i></span>
                         <span class="arrow"></span>
                     </button>
                     <div class="faq-a"><div class="inner" id="loc-faq2-a"></div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-q">
-                        <span id="loc-faq3-q"></span>
+                        <span id="loc-faq3-q"><i class="bi bi-arrow-right-short"></i></span>
                         <span class="arrow"></span>
                     </button>
                     <div class="faq-a"><div class="inner" id="loc-faq3-a"></div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-q">
-                        <span id="loc-faq4-q"></span>
+                        <span id="loc-faq4-q"><i class="bi bi-arrow-right-short"></i></span>
                         <span class="arrow"></span>
                     </button>
                     <div class="faq-a"><div class="inner" id="loc-faq4-a"></div></div>
@@ -145,7 +155,7 @@
                 <img src="./assets/PulseWoB.png" alt="Pulse Logo" class="logo-img">
             </a>
             <div class="contact">
-                <span class="pill"><strong id="loc-Kontakt"></strong> <span style="opacity:.9">team.pulse.ua@gmail.com</span></span>
+                <span class="pill"><i class="bi bi-envelope"></i> <strong id="loc-Kontakt"></strong> <span style="opacity:.9">team.pulse.ua@gmail.com</span></span>
                 <div style="display:flex;gap:8px;flex-wrap:wrap">
                 </div>
             </div>

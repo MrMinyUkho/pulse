@@ -45,6 +45,25 @@ $(document).ready(()=>{
         ua: { flag: './assets/icons/ua_flag.svg', text: 'UA' }
     };
 
+    const projectLinks = {
+        ua: {
+            learn_more1: "https://docs.google.com/document/d/1yKPdnKxUCoSX6Xvirg4z06DyIRVW7DeE-lSSPtvezgU/edit?usp=sharing",
+            learn_more2: "https://docs.google.com/document/d/1YxuGs3IgMKMbyVEqVtJfa26p9vRKJ5Oek8UveBQbK7s/edit?usp=sharing",
+            learn_more3: "https://docs.google.com/document/d/15PXXSpi1MhIw92v6jnRsC0c_zjFk75aCg5-Ol-BgraM/edit?usp=sharing"
+        },
+        us: {
+            learn_more1: "https://docs.google.com/document/d/1ys7G0cYQ_xPbTogcdxnJMv1HF08RaEfQKU132xFFopY/edit?usp=sharing",
+            learn_more2: "https://docs.google.com/document/d/1dcYERLQAGf0S9uIq7XoSOlER7gCGWdRF635_StebjKQ/edit?usp=sharing",
+            learn_more3: "https://docs.google.com/document/d/1rcIlug89CQ7yZvmaGiCrJYXmXjjGlkPWzY0Ornowu2Y/edit?usp=sharing"
+        }
+    };
+
+    function updateProjectLinks(lang) {
+        $('#loc-learn-more1').attr('href', projectLinks[lang].learn_more1);
+        $('#loc-learn-more2').attr('href', projectLinks[lang].learn_more2);
+        $('#loc-learn-more3').attr('href', projectLinks[lang].learn_more3);
+    }
+
     function updateLangButton(lang) {
         $('#current-lang-flag').attr('src', langData[lang].flag);
         $('#current-lang-text').text(langData[lang].text);
@@ -55,6 +74,7 @@ $(document).ready(()=>{
     }
 
     updateLangButton(current_language);
+    updateProjectLinks(current_language);
 
     $('#language-toggle').click(() => {
         $('.language-selector').toggleClass('open');
@@ -66,6 +86,7 @@ $(document).ready(()=>{
         if (newLang !== current_language) {
             current_language = newLang;
             updateLangButton(newLang);
+            updateProjectLinks(newLang);
             translatePage();
         }
         $('.language-selector').removeClass('open');
@@ -112,13 +133,13 @@ $(document).ready(()=>{
                 ourTeam: "Команда",
                 ourContacts: "Контакти",
                 Kontakt: "Почта:",
-                "entry-word": "Думай глибше, але не ускладнюй ✨",
+                "entry-word": "Думай глибше, але не ускладнюй",
                 "our-projects": "Наші проєкти",
                 "short-description": `
                     Ми команда студентів з різних сфер, об'єднана спільною метою: створювати комерційно<br>
                     успішні проекти з реальною соціальною користю.<br><br>
 
-                    <h2 style="margin:0;">Наші ключові принципи</h2>
+                    <h2 style="margin:0;">Наші ключові принципи:</h2><br>
                     <b>• Конструктивність.</b><br>
                     Відкидаєш – пропонуй. Ми цінуємо критику, яка веде до вирішення питання.<br><br>
 
@@ -157,26 +178,19 @@ $(document).ready(()=>{
                     <img src="assets/content/pulse1.PNG"><br>
                 `,
                 "pulse2-desc": `
-                    <h2>Виробництво модульних ТЕЦ</h2>
+                    <h4>Виробництво модульних ТЕЦ</h4>
 
-                    Як ми дійшли до цього? Відносно недороге виробництво, здатність модульних конструкцій до транспортування, ефективність, яку пропонує децентралізація потужностей у сфері енергетики.
-                    <h3>1) Короткий опис продукту</h3>
-                    Теплоелектроцентралі (ТЕЦ) - це один із видів теплоелектростанцій - головна відмінність у тому, що крім виробництва електроенергії, ми також виробляємо теплову енергію.
-                    Виробнена теплова енергія згодом застосовується для опалення приміщень, а також для постачання гарячої води.
-                    Максимальний ККД ТЕЦ становить близько 95%, коли ТЕС - 40%. Ми можемо назвати ТЕЦ вдосконаленою та енергоефективною версією ТЕС.
-                    Співвідношення виробленої електроенергії до теплової в середньому становить 30/70. З цього випливає мінус: у більшості країн попит на теплову енергію падає у теплі періоди року, тому що тоді ми не потребуємо опалення.
-                    <h4>Чому модульні конструкції?</h4>
-                    Вони мобільні. Це означає, що незважаючи на свою внушуючу масу (на установку потужністю 1МВт це до 20 тонн), її можливо транспортувати в регіон, де, наприклад, пропозиція впала, і ви хочете на цьому заробити. Друга перевага спирається на те, що собівартість виробництва варіюється між країнами. Це дозволяє виробляти модульні ТЕЦ в одній країні і транспортувати її в більш економічно розвинені країни.
-                    <h3>2)	Попит в Україні</h3>
-                    Внаслідок військових подій було зруйновано близько 80% ТЕС, які включають ТЕЦ.
-                    Модульні ТЕЦ малої потужності стали б відмінним рішенням, адже при великій кількості малих ТЕЦ вони створюють децентралізовану потужність, для знищення якої знадобиться виділити більше грошей порівняно зі звичайними ТЕЦ. При необхідності їх також можливо транспортувати в знеструмлені регіони з тих, де електроенергії достатньо.
-                    Виробництво таких модульних ТЕЦ в Україні стало б як підтримкою державі, так і можливістю стимулювати економіку України шляхом експортування продукції. Ринковою можливістю для
-                    України виступає менша собівартість одиниці виробництва порівняно зі США та країнами Європи та наявність висококваліфікованих спеціалістів у галузі інженерії.
-                    <h3>3) Детальніше про концепцію</h3>
-                    <img src="assets/content/handdrawing.png">
-                    Як ми бачимо, два важливих компонента ТЕЦ - турбіна та генератор, виробляються українськими компаніями в сфері енергетичного машинобудування. Те саме стосується теплообмінників. На наступній ілюстрації показана груба формула, що дозволяє порахувати три значення відстані: по одному на ЕЕ та ТЕ та одне загальне; відштовхуючись від яких виявляється раціональність розміщення модульної ТЕЦ потужністю 1МВт. Також показаний приклад розрахунку економії, обумовленої установкою мініатюрної ТЕЦ: за основу були взяті середньостатистичні значення по світу.
-                    <img src="assets/content/pulse2img1.png">
-                    <img src="assets/content/pulse2img2.png">
+                    Проєкт "Пульс 2" – це, якщо коротко, виробництво модульних ТЕЦ. Як ми взагалі до цього прийшли? Просто подивились, що відбувається в енергетиці, і знайшли рішення, яке поєднує в собі і ефективність, і мобільність, і гроші.<br><br>
+
+                    В основі ідеї лежить створення теплоелектроцентралей, або ТЕЦ. На відміну від звичайних ТЕС, вони виробляють не тільки електрику, а ще й тепло, і за рахунок цього їхній ККД може досягати 95%.<br><br>
+
+                    Але наша головна фішка – це модульність. Такі станції можна робити прямо в Україні, де собівартість нижча, а потім везти на продаж у більш розвинені країни. Або ж, що не менш важливо, оперативно перекидати їх у ті регіони, де зараз найбільший дефіцит енергії.<br>
+
+                    <h4>Чому це так важливо саме для України?</h4>
+
+                    Все просто: через війну у нас зруйновано близько 80% ТЕС та ТЕЦ. Якщо замість кількох великих станцій створити децентралізовану мережу з великої кількості маленьких, модульних ТЕЦ, то вся енергосистема стане набагато стійкішою до атак. Плюс, це реальна можливість підтримати економіку країни через експорт. Ми можемо використати наші переваги – нижчу собівартість виробництва та наявність крутих інженерів.<br><br>
+
+                    Ми вже проаналізували, що ключові компоненти, як-от турбіни та генератори, виробляються в Україні. Навіть розробили концепцію розрахунку, як правильно розміщувати такі ТЕЦ, щоб це було максимально раціонально.
                 `,
                 "pulse3-desc": `
                     Готуючись до ReBuild Ukraine, у команди з'явилася ідея "А давайте спробуємо зробити проєкт спеціально під компанії, які там будуть?", так і сіли всі 12 людей думати "Що об'єднує більшість компаній?". Проаналізувавши 112 компаній (база даних була зібрана за соціальними мережами та сайтом) ми дійшли висновку про 3 напрямки які охоплюють 80% компаній, а саме: створення (інжиніринг та будматеріали) модульних будинків, що обслуговують компанії (вода, еко рішення відновлювана енергетика та системи безпеки).<br><br>
@@ -199,7 +213,10 @@ $(document).ready(()=>{
                 "pulse2name": "Пульс 2",
                 "pulse3name": "Проєкт «Варшава»",
                 "pulse4name": "Скоро…",
-                "team-logo": "Команда"
+                "team-logo": "Команда",
+                "learn-more1": "Дізнатись більше",
+                "learn-more2": "Дізнатись більше",
+                "learn-more3": "Дізнатись більше"
             }
         },
         us: {
@@ -235,12 +252,12 @@ $(document).ready(()=>{
                 ourContacts: "Contacts",
                 Kontakt: "E-mail:",
                 "our-projects": "Our projects",
-                "entry-word": "Think deeply, but don't complicate ✨",
+                "entry-word": "Think deeply, but don't complicate",
                 "short-description": `
                     We are a team of students from different fields, united by a common goal: to create commercially<br>
                     successful projects with real social benefit.<br><br>
 
-                    <h2 style="margin:0;">Our key principles:</h2>
+                    <h2 style="margin:0;">Our key principles:</h2><br>
                     <b>• Constructivity.</b><br>
                     If you reject, suggest. We value criticism that leads to a solution.<br><br>
 
@@ -251,7 +268,7 @@ $(document).ready(()=>{
                     We are one team. We divide into groups for efficiency, but always work as a single whole.
                 `,
                 "pulse1-desc": `
-                    Sold the project in 3 minutes. What is the project? How?<br><br>
+                    <h4 style="margin:0;">Sold the project in 3 minutes. What is the project? How?</h4><br>
 
                     On October 18, 2025, the Pulse team had to split into two parts at the hackathon because the rules allowed a maximum of 6 people per team. That’s how the projects Pulse 1 and Pulse 2 appeared.<br>
                     Directions of Pulse 1 project: economics, business strategies, and social part.<br>
@@ -276,26 +293,22 @@ $(document).ready(()=>{
                     Identified the most probable risks and developed ways to minimize them to increase the project’s chances of success.<br><br>
 
                     Thanks to thorough preparation, the team answered all possible questions, including ecological, psychological, security, engineering, financial, and organizational, and modeled an approximate business model.<br><br>
-                    <img src="assets/content/pulse1.PNG"><br>
+                    <img src="assets/content/pulse1.PNG">
                 `,
                 "pulse2-desc": `
-                    <h3>Modular CHP (Combined Heat and Power) Production</h3>
-                    How did we get to this? Relatively low-cost production, the ability of modular constructions to be transported, the efficiency offered by the decentralization of power capacities in the energy sector.
-                    <h4>1) Brief Product Description</h4>
-                    Combined Heat and Power plants (CHP) - are one type of thermal power stations - the main difference is that in addition to producing electricity, we also produce thermal energy.
-                    The produced thermal energy is later used for heating spaces and supplying hot water.
-                    The maximum efficiency of CHP is around 95%, whereas traditional thermal power stations - 40%. We can call CHP an improved and energy-efficient version of thermal power stations.
-                    The ratio of produced electricity to thermal energy averages 30/70. This leads to a disadvantage: in most countries, demand for thermal energy drops during warm seasons because we don't need heating then.
-                    <h4>Why Modular Constructions?</h4>
-                    They are mobile. This means that despite their considerable mass (for a 1MW installation, up to 20 tons), they can be transported to a region where, for example, supply has dropped and you want to profit. The second advantage is based on the fact that production costs vary between countries. This allows producing modular CHP in one country and transporting it to more economically developed countries.
-                    <h4>2)	Demand in Ukraine</h4>
-                    As a result of military events, approximately 80% of thermal power stations, which include CHP plants, were destroyed.
-                    Small-capacity modular CHP would be an excellent solution because with a large number of small CHP units, they create decentralized capacity, which would require more resources to destroy compared to conventional CHP plants. When necessary, they can also be transported to de-energized regions from areas where there is sufficient electricity.
-                    The production of such modular CHP in Ukraine would serve both as support to the state and as an opportunity to stimulate Ukraine's economy through product export. A market opportunity for Ukraine is the lower production cost per unit compared to the USA and European countries, and the availability of highly qualified specialists in the field of engineering.
-                    <h4>3)	More Details on the Concept:</h4>
-                    As we can see, two important components of CHP - turbines and generators - are produced by Ukrainian companies in the field of power machinery manufacturing. The same applies to heat exchangers. The following illustration shows a rough formula that allows calculating three distance values: one each for electrical energy and thermal energy, and one overall; based on which we determine the rationality of placing a modular CHP with a capacity of 1MW. Also shown is an example of calculating savings from installing a mini-CHP: world average values were used as the basis.
-                    <img src="assets/content/pulse2img1.png">
-                    <img src="assets/content/pulse2img2.png">
+                    <h4>Modular CHP (Combined Heat and Power) Production</h4>
+
+                    The "Pulse 2" project is, in short, the production of modular CHPs. How did we even get to this idea? We just looked at what's happening in the energy sector and found a solution that combines efficiency, mobility, and money.<br><br>
+
+                    The basis of the idea is the creation of combined heat and power plants, or CHPs. Unlike conventional TPPs, they produce not only electricity but also heat, and because of this, their efficiency rating can reach 95%.<br><br>
+
+                    But our key feature is modularity. Such plants can be made right in Ukraine, where the production cost is lower, and then transported for sale to more developed countries. Or, what is no less important, quickly deploy them to those regions where there is currently the greatest energy deficit.<br>
+
+                    <h4>Why is this so important specifically for Ukraine?</h4>
+
+                    It's simple: because of the war, about 80% of our TPPs and CHPs have been destroyed. If instead of a few large plants, we create a decentralized network of a large number of small, modular CHPs, then the entire energy system will become much more resilient to attacks. Plus, this is a real opportunity to support the country's economy through exports. We can use our advantages – lower production cost and the availability of cool engineers.<br><br>
+
+                    We have already analyzed that the key components, such as turbines and generators, are produced in Ukraine. We even developed a calculation concept for how to properly place such CHPs so that it is as rational as possible.
                 `,
                 "pulse3-desc": `
                     While preparing for Rebuild Ukraine, the team had an idea: "What if we design a project specifically for the companies that will be there?" So all 12 of us started thinking: "What unites most companies?" After analyzing 112 companies (the database was collected from social networks and websites), we came to the conclusion that there are 3 directions covering 80% of companies, namely: creation (engineering and building materials) of modular houses, service companies (water, eco-solutions, renewable energy, and security systems).<br><br>
@@ -318,7 +331,10 @@ $(document).ready(()=>{
                 "pulse2name": "Pulse 2",
                 "pulse3name": "«Warszawa» project",
                 "pulse4name": "Soon…",
-                "team-logo": "Team"
+                "team-logo": "Team",
+                "learn-more1": "Learn more",
+                "learn-more2": "Learn more",
+                "learn-more3": "Learn more"
             }
 
         }
@@ -372,7 +388,18 @@ $(document).ready(()=>{
         var translate_map = get_all_translation(vocabulary[current_language])
 
         for (const [key, value] of Object.entries(translate_map)) {
-            $(`#loc-${key}`).html(value)
+            const element = $(`#loc-${key}`);
+            if (element.length) {
+                const icon = element.find('i');
+                if (icon.length) {
+                    // Create a temporary container for the text
+                    const textSpan = $('<span></span>').html(value);
+                    // Clear the element and append the icon and the new text
+                    element.empty().append(icon).append(textSpan);
+                } else {
+                    element.html(value);
+                }
+            }
         }
         
     }

@@ -260,6 +260,30 @@ section{padding:68px 0}
     padding: 0 18px 18px;
 }
 
+.project-footer {
+    padding: 18px;
+    border-top: 1px solid rgba(2,6,23,.08);
+    margin-top: 18px;
+}
+
+.btn-learn-more {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background-color: var(--brand);
+    padding: 10px 20px;
+    border-radius: 99px;
+    box-shadow: var(--shadow);
+    transition: background-color .3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-learn-more:hover {
+    background-color: #7b25eb;
+}
+
 /* команда */
 .team{display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:16px}
 @media (max-width:1100px){ .team{grid-template-columns:repeat(4,1fr)} }
@@ -407,27 +431,40 @@ footer{padding:28px 0 56px; background:#40214b; color:#e2f5ff; margin-top:36px}
 /* Фикс для мобилок */
 @media (max-width: 640px) {
 
-    /* чтобы меню не залазило на логотип */
+    /* Гибкая шапка с переносом */
     header .nav {
-        display: flex;
-        /* flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: auto auto;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
-        gap: 8px;
+        gap: 16px;
     }
 
     header nav {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        gap: 8px;
+        display: grid;
+        grid-template-columns: auto auto;
         flex-wrap: wrap;
+        justify-content: center;
+        justify-self: end;
+        gap: 8px;
     }
 
-    header nav .btn {
-        font-size: 14px;
-        padding: 6px 12px;
-        white-space: nowrap;
+    /* Выпадающее меню языка */
+    #language-options {
+        left: auto;
+        right: 0;
+    }
+
+    /* Футер */
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-inner .contact {
+        width: 100%;
     }
 
     /* заголовки в hero адаптируются под ширину */
@@ -436,17 +473,12 @@ footer{padding:28px 0 56px; background:#40214b; color:#e2f5ff; margin-top:36px}
     }
 
     .hero-inner {
-        top: 15%;
+        top: 25%;
         left: 50%;
         transform: translateX(-50%);
         width: calc(100% - 32px);
         padding: 0;
     }
-
-    /* чтобы hero блок не был огромным */
-    /* .hero {
-        min-height: 60vh;
-    } */
 
     /* выравнивание логотипа */
     .logo {
@@ -459,5 +491,20 @@ footer{padding:28px 0 56px; background:#40214b; color:#e2f5ff; margin-top:36px}
         height: 32px;
         width: auto;
     }
+}
+
+/* Стили для иконок */
+.title, .project-q span[id^="loc-"], .faq-q span[id^="loc-"], .btn-learn-more, .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-learn-more i {
+    font-size: 1.2em;
+}
+
+.pill i {
+    font-size: 1.3em;
 }
 
