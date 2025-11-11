@@ -1,107 +1,118 @@
-// функционал для разделу "Вопроси"
-document.querySelectorAll('.faq-q').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-        const faqItem = btn.closest('.faq-item');
-        const faqA = faqItem.querySelector('.faq-a');
-        
-        faqItem.classList.toggle('open');
-
-        if (faqItem.classList.contains('open')) {
-            // Устанавливаем max-height равным реальной высоте контента
-            faqA.style.maxHeight = faqA.scrollHeight + "px";
-        } else {
-            // Сбрасываем max-height для анимации закрытия
-            faqA.style.maxHeight = null;
-        }
+// Универсальная функция для аккордеонов (FAQ и проекты)
+const initAccordion = (triggerSelector, containerClass, contentClass) => {
+    document.querySelectorAll(triggerSelector).forEach(btn => {
+        btn.addEventListener('click', () => {
+            const container = btn.closest(containerClass);
+            const content = container.querySelector(contentClass);
+            const isOpen = container.classList.contains('open');
+            
+            if (isOpen) {
+                // Закрываем
+                content.style.maxHeight = null;
+                container.classList.remove('open');
+            } else {
+                // Открываем - сначала добавляем класс, потом вычисляем высоту
+                container.classList.add('open');
+                // Используем двойной requestAnimationFrame для гарантии применения стилей
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        content.style.maxHeight = `${content.scrollHeight}px`;
+                    });
+                });
+            }
+        });
     });
-});
+};
 
-// функционал для карточек проектів
-document.querySelectorAll('.project-q').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-        const projectCard = btn.closest('.project-card');
-        const projectA = projectCard.querySelector('.project-a');
-        
-        projectCard.classList.toggle('open');
+// Инициализация аккордеонов
+initAccordion('.faq-q', '.faq-item', '.faq-a');
+initAccordion('.project-q', '.project-card', '.project-a');
 
-        if (projectCard.classList.contains('open')) {
-            // Устанавливаем max-height равным реальной высоте контента
-            projectA.style.maxHeight = projectA.scrollHeight + "px";
-        } else {
-            // Сбрасываем max-height для анимации закрытия
-            projectA.style.maxHeight = null;
-        }
-    });
-});
+// Конфигурация языков
+const LANGUAGES = {
+    US: 'us',
+    UA: 'ua'
+};
 
-$(document).ready(()=>{
+const langData = {
+    [LANGUAGES.US]: { flag: './assets/icons/us_flag.svg', text: 'EN' },
+    [LANGUAGES.UA]: { flag: './assets/icons/ua_flag.svg', text: 'UA' }
+};
 
-    const locale = new Intl.Locale(navigator.language)
-
-    var current_language = "us"
-
-    const langData = {
-        us: { flag: './assets/icons/us_flag.svg', text: 'EN' },
-        ua: { flag: './assets/icons/ua_flag.svg', text: 'UA' }
-    };
+$(document).ready(() => {
+    const locale = new Intl.Locale(navigator.language);
+    let currentLanguage = locale.language === 'uk' ? LANGUAGES.UA : LANGUAGES.US;
 
     const projectLinks = {
-        ua: {
+        [LANGUAGES.UA]: {
             learn_more1: "https://docs.google.com/document/d/1yKPdnKxUCoSX6Xvirg4z06DyIRVW7DeE-lSSPtvezgU/edit?usp=sharing",
             learn_more2: "https://docs.google.com/document/d/1YxuGs3IgMKMbyVEqVtJfa26p9vRKJ5Oek8UveBQbK7s/edit?usp=sharing",
             learn_more3: "https://docs.google.com/document/d/15PXXSpi1MhIw92v6jnRsC0c_zjFk75aCg5-Ol-BgraM/edit?usp=sharing"
         },
-        us: {
+        [LANGUAGES.US]: {
             learn_more1: "https://docs.google.com/document/d/1ys7G0cYQ_xPbTogcdxnJMv1HF08RaEfQKU132xFFopY/edit?usp=sharing",
             learn_more2: "https://docs.google.com/document/d/1dcYERLQAGf0S9uIq7XoSOlER7gCGWdRF635_StebjKQ/edit?usp=sharing",
             learn_more3: "https://docs.google.com/document/d/1rcIlug89CQ7yZvmaGiCrJYXmXjjGlkPWzY0Ornowu2Y/edit?usp=sharing"
         }
     };
 
-    function updateProjectLinks(lang) {
-        $('#loc-learn-more1').attr('href', projectLinks[lang].learn_more1);
-        $('#loc-learn-more2').attr('href', projectLinks[lang].learn_more2);
-        $('#loc-learn-more3').attr('href', projectLinks[lang].learn_more3);
-    }
+    // Кэширование элементов DOM
+    const $languageSelector = $('.language-selector');
+    const $currentLangFlag = $('#current-lang-flag');
+    const $currentLangText = $('#current-lang-text');
+    const $languageToggle = $('#language-toggle');
+    const $languageOptions = $('#language-options a');
+    const $header = $('header');
+    const $logoWhite = $('#logoWhite');
+    const $logoBlack = $('#logoBlack');
+    const $teamContainer = $('#team-container');
 
-    function updateLangButton(lang) {
-        $('#current-lang-flag').attr('src', langData[lang].flag);
-        $('#current-lang-text').text(langData[lang].text);
-    }
+    // Обновление ссылок на проекты
+    const updateProjectLinks = (lang) => {
+        const links = projectLinks[lang];
+        $('#loc-learn-more1').attr('href', links.learn_more1);
+        $('#loc-learn-more2').attr('href', links.learn_more2);
+        $('#loc-learn-more3').attr('href', links.learn_more3);
+    };
 
-    if (locale.language === "uk") { 
-        current_language = "ua";
-    }
+    // Обновление кнопки языка
+    const updateLangButton = (lang) => {
+        const data = langData[lang];
+        $currentLangFlag.attr('src', data.flag);
+        $currentLangText.text(data.text);
+    };
 
-    updateLangButton(current_language);
-    updateProjectLinks(current_language);
+    // Инициализация языка
+    updateLangButton(currentLanguage);
+    updateProjectLinks(currentLanguage);
 
-    $('#language-toggle').click(() => {
-        $('.language-selector').toggleClass('open');
-    });
+    // Переключение языка
+    $languageToggle.on('click', () => $languageSelector.toggleClass('open'));
 
-    $('#language-options a').click(function(e) {
+    $languageOptions.on('click', function(e) {
         e.preventDefault();
         const newLang = $(this).data('lang');
-        if (newLang !== current_language) {
-            current_language = newLang;
+        
+        if (newLang !== currentLanguage) {
+            currentLanguage = newLang;
             updateLangButton(newLang);
             updateProjectLinks(newLang);
             translatePage();
         }
-        $('.language-selector').removeClass('open');
+        
+        $languageSelector.removeClass('open');
     });
 
-    $(document).click(function(event) {
-        if (!$(event.target).closest('.language-selector').length) {
-            if ($('.language-selector').hasClass('open')) {
-                $('.language-selector').removeClass('open');
-            }
+    // Закрытие селектора языка при клике вне его
+    $(document).on('click', (event) => {
+        if (!$(event.target).closest('.language-selector').length && $languageSelector.hasClass('open')) {
+            $languageSelector.removeClass('open');
         }
     });
 
+    // Словарь переводов
     const vocabulary = {
-        ua: {
+        [LANGUAGES.UA]: {
             membersName: {
                 anton: "Антон",
                 dima1: "Дмитро",
@@ -193,13 +204,12 @@ $(document).ready(()=>{
                     Ми вже проаналізували, що ключові компоненти, як-от турбіни та генератори, виробляються в Україні. Навіть розробили концепцію розрахунку, як правильно розміщувати такі ТЕЦ, щоб це було максимально раціонально.
                 `,
                 "pulse3-desc": `
+                    <img src="assets/content/house_pulse3.jpg"><br>
                     Готуючись до ReBuild Ukraine, у команди з'явилася ідея "А давайте спробуємо зробити проєкт спеціально під компанії, які там будуть?", так і сіли всі 12 людей думати "Що об'єднує більшість компаній?". Проаналізувавши 112 компаній (база даних була зібрана за соціальними мережами та сайтом) ми дійшли висновку про 3 напрямки які охоплюють 80% компаній, а саме: створення (інжиніринг та будматеріали) модульних будинків, що обслуговують компанії (вода, еко рішення відновлювана енергетика та системи безпеки).<br><br>
 
                     Ідея створення філії іноземної компанії не була у нас першою у списку всіх ідей. З тим, як ми заглиблювалися в початковий концепт, дізнаючись про його недоліки, ідея з філією виникала все частіше. Врешті-решт вона стала основною, тому що початкова ідея була приведена до висновку "Компанії з модульними будинками і так роблять з 0 і повну установку, а значить, унікальність і синергія загубилися.<br><br>
 
                     Про відповіді на запитання "А саме як так вийшло?" йде далі.
-
-                    <img src="assets/content/house_pulse3.jpg"><br>
                 `,
                 "pulse4-desc":`<img style="border-radius: 1em;" src="assets/content/soon_ua.PNG">`,
                 "faq-title": "Найпоширеніші питання",
@@ -221,7 +231,7 @@ $(document).ready(()=>{
                 "learn-more3": "Дізнатись більше"
             }
         },
-        us: {
+        [LANGUAGES.US]: {
             membersName: {
                 anton: "Anton",
                 dima1: "Dmytro",
@@ -314,7 +324,7 @@ $(document).ready(()=>{
                 `,
                 "pulse3-desc": `
                     <img src="assets/content/house_pulse3.jpg"><br>
-                    
+
                     While preparing for Rebuild Ukraine, the team had an idea: "What if we design a project specifically for the companies that will be there?" So all 12 of us started thinking: "What unites most companies?" After analyzing 112 companies (the database was collected from social networks and websites), we came to the conclusion that there are 3 directions covering 80% of companies, namely: creation (engineering and building materials) of modular houses, service companies (water, eco-solutions, renewable energy, and security systems).<br><br>
 
                     The idea of creating a branch of a foreign company was not at the top of our list of ideas. As we delved deeper into the original concept and discovered its shortcomings, the branch idea came up more and more often. Eventually, it became our main focus because the original idea led to the conclusion: "Companies with modular houses already do everything from zero to full installation themselves, which means uniqueness and synergy were lost."<br><br>
@@ -342,87 +352,113 @@ $(document).ready(()=>{
             }
 
         }
-    }
+    };
 
-    const list_team_members = [
-        { name:"lera",   role:"lera-role",   image:"Lera.jpg" },
-        { name:"alex",   role:"alex-role",   image:"alex.png" },
-        { name:"misha",  role:"misha-role",  image:"Michail.jpg" },
-        { name:"igor",   role:"igor-role",   image:"Igor.jpg" },
-        { name:"anton",  role:"anton-role",  image:"Anton.jpg" },
-        { name:"dima1",  role:"dima1-role",  image:"Dmytro2.jpg" },
-        { name:"dima2",  role:"dima2-role",  image:"Dmytro1.jpg" },
-        { name:"roma",   role:"roma-role",   image:"Roman.jpg" },
-        { name:"denis",  role:"denis-role",  image:"Denis.jpg" },
-        { name:"nick",   role:"nick-role",   image:"nick.png" },
-    ]
+    // Список членов команды
+    const teamMembers = [
+        { name: "lera",   role: "lera-role",   image: "Lera.jpg" },
+        { name: "alex",   role: "alex-role",   image: "alex.png" },
+        { name: "misha",  role: "misha-role",  image: "Michail.jpg" },
+        { name: "igor",   role: "igor-role",   image: "Igor.jpg" },
+        { name: "anton",  role: "anton-role",  image: "Anton.jpg" },
+        { name: "dima1",  role: "dima1-role",  image: "Dmytro2.jpg" },
+        { name: "dima2",  role: "dima2-role",  image: "Dmytro1.jpg" },
+        { name: "roma",   role: "roma-role",   image: "Roman.jpg" },
+        { name: "denis",  role: "denis-role",  image: "Denis.jpg" },
+        { name: "nick",   role: "nick-role",   image: "nick.png" }
+    ];
 
-    $("#team-container").html("")
-
-    for (var i of list_team_members) {
-        console.log(i)
-        textIfNoPhoto = i.image !== "" ? "" : "Photo"
-        imageLink = i.image !== "" ? ` style="background-image: url('./assets/photos/${i.image}');"` : ""
-        let member = `<div class="member">
-                        <div class="ph"${imageLink}>
-                            ${textIfNoPhoto}
-                        </div>
-                        <div class="meta">
-                            <div id="loc-${i.name}" class="name">Имя</div>
-                            <div id="loc-${i.role}" class="role">Верховный жрец</div>
-                        </div>
-                    </div>`
-        $("#team-container").append(member)
-    }
-
-    function translatePage() {
+    // Рендеринг команды
+    const renderTeam = () => {
+        const membersHTML = teamMembers.map(member => {
+            const hasImage = member.image !== "";
+            const imageStyle = hasImage ? ` style="background-image: url('./assets/photos/${member.image}');"` : "";
+            const photoText = hasImage ? "" : "Photo";
+            
+            return `
+                <div class="member">
+                    <div class="ph"${imageStyle}>${photoText}</div>
+                    <div class="meta">
+                        <div id="loc-${member.name}" class="name">Имя</div>
+                        <div id="loc-${member.role}" class="role">Верховный жрец</div>
+                    </div>
+                </div>
+            `;
+        }).join('');
         
-        function get_all_translation(obj) {
-            result = {}
-            for (const [key, value] of Object.entries(obj)) {
-                if(typeof(value) === "string"){
-                    result[key] = value
+        $teamContainer.html(membersHTML);
+    };
+
+    renderTeam();
+
+    // Функция для получения всех переводов из вложенного объекта
+    const getAllTranslations = (obj) => {
+        const result = {};
+        
+        for (const [key, value] of Object.entries(obj)) {
+            if (typeof value === 'string') {
+                result[key] = value;
+            } else {
+                Object.assign(result, getAllTranslations(value));
+            }
+        }
+        
+        return result;
+    };
+
+    // Функция перевода страницы
+    const translatePage = () => {
+        const translateMap = getAllTranslations(vocabulary[currentLanguage]);
+
+        for (const [key, value] of Object.entries(translateMap)) {
+            const $element = $(`#loc-${key}`);
+            
+            if ($element.length) {
+                const $icon = $element.find('i');
+                
+                if ($icon.length) {
+                    const $textSpan = $('<span>').html(value);
+                    $element.empty().append($icon, $textSpan);
                 } else {
-                    result = {...result, ...get_all_translation(value)}
+                    $element.html(value);
                 }
             }
-            return result
+        }
+    };
+    
+    translatePage();
+
+    // Обработка скролла для изменения хедера
+    let lastScrollY = 0;
+    const scrollThreshold = window.innerHeight;
+    
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        const shouldShowDarkHeader = currentScrollY > scrollThreshold;
+        const isDarkHeader = $header.hasClass('header-down');
+        
+        if (shouldShowDarkHeader && !isDarkHeader) {
+            $header.addClass('header-down');
+            $logoWhite.hide();
+            $logoBlack.show();
+        } else if (!shouldShowDarkHeader && isDarkHeader) {
+            $header.removeClass('header-down');
+            $logoWhite.show();
+            $logoBlack.hide();
         }
         
-        var translate_map = get_all_translation(vocabulary[current_language])
-
-        for (const [key, value] of Object.entries(translate_map)) {
-            const element = $(`#loc-${key}`);
-            if (element.length) {
-                const icon = element.find('i');
-                if (icon.length) {
-                    // Create a temporary container for the text
-                    const textSpan = $('<span></span>').html(value);
-                    // Clear the element and append the icon and the new text
-                    element.empty().append(icon).append(textSpan);
-                } else {
-                    element.html(value);
-                }
-            }
+        lastScrollY = currentScrollY;
+    };
+    
+    // Throttle для оптимизации производительности
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        if (!scrollTimeout) {
+            scrollTimeout = setTimeout(() => {
+                handleScroll();
+                scrollTimeout = null;
+            }, 10);
         }
-        
-    }
-    translatePage()
-
-    onscroll = (event) => {
-        if(window.scrollY/window.innerHeight > 1){
-            if(!$("header").hasClass("header-down")){
-                $("header").toggleClass("header-down")
-                $("#logoWhite").hide()
-                $("#logoBlack").show()
-            }
-        } else {
-            if($("header").hasClass("header-down")){
-                $("header").toggleClass("header-down")
-                $("#logoWhite").show()
-                $("#logoBlack").hide()
-            }
-        }
-    }
-})
+    });
+});
 
