@@ -615,13 +615,17 @@ footer {
     }
 
     /* Hero */
-    .hero-card h1 {
-        font-size: clamp(28px, 8vw, 44px);
+    .hero {
+        align-items: flex-start;
     }
-
+    
     .hero-inner {
         width: calc(100% - 32px);
-        padding: 0;
+        padding: 80px 0 0 0;
+    }
+    
+    .hero-card h1 {
+        font-size: clamp(28px, 8vw, 44px);
     }
 
     .logo img {
