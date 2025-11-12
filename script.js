@@ -204,8 +204,8 @@ $(document).ready(() => {
                     Ми вже проаналізували, що ключові компоненти, як-от турбіни та генератори, виробляються в Україні. Навіть розробили концепцію розрахунку, як правильно розміщувати такі ТЕЦ, щоб це було максимально раціонально.
                 `,
                 "pulse3-desc": `
-                    <img src="assets/content/house_pulse3.jpg"><br>
-                    Готуючись до ReBuild Ukraine, у команди з'явилася ідея "А давайте спробуємо зробити проєкт спеціально під компанії, які там будуть?", так і сіли всі 12 людей думати "Що об'єднує більшість компаній?". Проаналізувавши 112 компаній (база даних була зібрана за соціальними мережами та сайтом) ми дійшли висновку про 3 напрямки які охоплюють 80% компаній, а саме: створення (інжиніринг та будматеріали) модульних будинків, що обслуговують компанії (вода, еко рішення відновлювана енергетика та системи безпеки).<br><br>
+                    <img style="border-radius: 1.25em" src="assets/content/house_pulse3.jpg"><br>
+                    Готуючись до івенту, у команди зʼявилася ідея: <strong>«А давайте спробуємо зробити проєкт спеціально під компанії, які будуть на ReBuild Ukraine?»</strong>, так і сіли всі 12 людей думати «Що об'єднує більшість компаній там?». Проаналізувавши 112 компаній (база даних була зібрана за соціальними мережами та сайтом) ми дійшли висновку про 3 напрямки які охоплюють 80% компаній, а саме: створення (інжиніринг та будматеріали) модульних будинків, що обслуговують компанії (вода, еко рішення відновлювана енергетика та системи безпеки).<br><br>
 
                     Ідея створення філії іноземної компанії не була у нас першою у списку всіх ідей. З тим, як ми заглиблювалися в початковий концепт, дізнаючись про його недоліки, ідея з філією виникала все частіше. Врешті-решт вона стала основною, тому що початкова ідея була приведена до висновку "Компанії з модульними будинками і так роблять з 0 і повну установку, а значить, унікальність і синергія загубилися.<br><br>
 
@@ -323,9 +323,9 @@ $(document).ready(() => {
                     We have already analyzed that the key components, such as turbines and generators, are produced in Ukraine. We even developed a calculation concept for how to properly place such CHPs so that it is as rational as possible.
                 `,
                 "pulse3-desc": `
-                    <img src="assets/content/house_pulse3.jpg"><br>
+                    <img style="border-radius: 1.25em" src="assets/content/house_pulse3.jpg"><br>
 
-                    While preparing for Rebuild Ukraine, the team had an idea: "What if we design a project specifically for the companies that will be there?" So all 12 of us started thinking: "What unites most companies?" After analyzing 112 companies (the database was collected from social networks and websites), we came to the conclusion that there are 3 directions covering 80% of companies, namely: creation (engineering and building materials) of modular houses, service companies (water, eco-solutions, renewable energy, and security systems).<br><br>
+                    While preparing for the event, the team came up with an idea: <strong>«Let’s try to create a project specifically for the companies that will be at <a href="https://rebuildukraine.in.ua/" style="text-decoration: underline; color: #300f64ff">ReBuild Ukraine</a>?»</strong>. That’s what all 12 people thought, "What unites most companies?". After analyzing 112 companies (the database was collected from social networks and websites), we came to the conclusion that there are 3 directions covering 80% of companies, namely: creation (engineering and building materials) of modular houses, service companies (water, eco-solutions, renewable energy, and security systems).<br><br>
 
                     The idea of creating a branch of a foreign company was not at the top of our list of ideas. As we delved deeper into the original concept and discovered its shortcomings, the branch idea came up more and more often. Eventually, it became our main focus because the original idea led to the conclusion: "Companies with modular houses already do everything from zero to full installation themselves, which means uniqueness and synergy were lost."<br><br>
 
