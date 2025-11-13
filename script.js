@@ -249,7 +249,7 @@ $(document).ready(() => {
                 "anton-role": "Captain of the 3D design, coding and engineering",
                 "dima1-role": "Programmer and engineer",
                 "dima2-role": "Ecologist",
-                "igor-role": "Team representative of ecology team",
+                "igor-role": "Representative of ecology team",
                 "lera-role": "CEO",
                 "marina-role": "3D designer",
                 "roma-role": "Economist",
